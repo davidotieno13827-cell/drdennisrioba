@@ -66,7 +66,26 @@
         h4,
         .display-font {
             font-family: 'Cormorant Garamond', serif;
-            letter-spacing: -0.02em;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            font-size: clamp(3.25rem, 6vw, 5.5rem);
+            line-height: 0.98;
+            font-weight: 600;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 3.5rem;
+            height: 1px;
+            margin-top: 1.25rem;
+            background: #d6a85f;
+        }
+
+        h2 {
+            line-height: 1.08;
         }
 
         header {
@@ -88,8 +107,9 @@
         main section {
             position: relative;
             overflow: hidden;
-            box-shadow: 0 20px 45px -28px rgba(15, 23, 42, 0.35);
-            border: 1px solid rgba(148, 163, 184, 0.12);
+            border-radius: 0.5rem;
+            box-shadow: 0 16px 38px -30px rgba(15, 23, 42, 0.32);
+            border: 1px solid rgba(148, 163, 184, 0.18);
         }
 
         main section::before {
@@ -126,11 +146,46 @@
 
         .hero-stat {
             backdrop-filter: blur(10px);
-            background: rgba(15, 23, 42, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(15, 23, 42, 0.2);
+            border: 1px solid rgba(214, 168, 95, 0.3);
         }
 
-        @media (max-width: 1023px) {
+        .mobile-nav {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-0.35rem);
+            visibility: hidden;
+            transition: max-height 320ms cubic-bezier(0.2, 0.75, 0.25, 1),
+                opacity 180ms ease, transform 220ms ease, visibility 320ms;
+        }
+
+        .mobile-nav.open {
+            max-height: 22rem;
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            transition-delay: 0ms;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding-top: 0.65rem;
+            padding-bottom: 0.65rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .mobile-nav {
+                transition: none;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
             header .max-w-7xl {
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -163,14 +218,6 @@
                 position: sticky;
             }
 
-            .mobile-nav {
-                display: none;
-            }
-
-            .mobile-nav.open {
-                display: block;
-            }
-
             main {
                 padding-top: 2.5rem;
                 padding-bottom: 3rem;
@@ -200,6 +247,7 @@
         }
 
         @media (max-width: 480px) {
+
             .header-actions a,
             .header-actions button {
                 flex: 1 1 auto;
@@ -247,13 +295,16 @@
                     class="bg-academic-primary text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg shadow shrink-0">
                     DO</div>
                 <div class="min-w-0">
-                    <span class="block font-bold text-slate-900 dark:text-white leading-tight truncate text-sm sm:text-base">Dr. Dennis Rioba
+                    <span
+                        class="block font-bold text-slate-900 dark:text-white leading-tight truncate text-sm sm:text-base">Dr.
+                        Dennis Rioba
                         Ocharo,
                         PhD</span>
                     <span class="text-xs text-slate-500 dark:text-slate-400">Kisii University</span>
                 </div>
             </div>
-            <nav class="hidden lg:flex space-x-5 text-sm font-medium text-slate-600 dark:text-slate-300">
+            <nav aria-label="Main navigation"
+                class="hidden lg:flex space-x-5 text-sm font-medium text-slate-600 dark:text-slate-300">
                 <a href="#about" class="hover:text-academic-primary dark:hover:text-amber-400 transition">About</a>
                 <a href="#scholar" class="hover:text-academic-primary dark:hover:text-amber-400 transition">Google
                     Scholar & Research</a>
@@ -284,7 +335,7 @@
                 </a>
                 <button id="mobileMenuButton" onclick="toggleMobileMenu()"
                     class="lg:hidden p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
-                    aria-label="Toggle mobile menu">
+                    aria-label="Open navigation menu" aria-controls="mobileNav" aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <button onclick="openContactModal()"
@@ -294,7 +345,7 @@
             </div>
         </div>
 
-        <nav id="mobileNav"
+        <nav id="mobileNav" aria-label="Mobile navigation" aria-hidden="true"
             class="mobile-nav border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 lg:hidden">
             <div class="max-w-7xl mx-auto px-4 py-3 space-y-2 text-sm font-medium text-slate-600 dark:text-slate-300">
                 <a href="#about"
@@ -1037,8 +1088,25 @@
             const mobileNav = document.getElementById('mobileNav');
             const button = document.getElementById('mobileMenuButton');
             const isOpen = mobileNav.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            mobileNav.setAttribute('aria-hidden', String(!isOpen));
             button.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         }
+
+        document.querySelectorAll('#mobileNav a').forEach((link) => {
+            link.addEventListener('click', () => {
+                const mobileNav = document.getElementById('mobileNav');
+                if (mobileNav.classList.contains('open')) toggleMobileMenu();
+            });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && document.getElementById('mobileNav').classList.contains('open')) {
+                toggleMobileMenu();
+                document.getElementById('mobileMenuButton').focus();
+            }
+        });
 
         function openContactModal() {
             document.getElementById('contactModal').classList.remove('hidden');
