@@ -17,7 +17,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -58,7 +60,11 @@
                 linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
         }
 
-        h1, h2, h3, h4, .display-font {
+        h1,
+        h2,
+        h3,
+        h4,
+        .display-font {
             font-family: 'Cormorant Garamond', serif;
             letter-spacing: -0.02em;
         }
@@ -124,6 +130,47 @@
             border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
+        @media (max-width: 767px) {
+            header .max-w-7xl {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            header {
+                position: sticky;
+            }
+
+            .mobile-nav {
+                display: none;
+            }
+
+            .mobile-nav.open {
+                display: block;
+            }
+
+            main {
+                padding-top: 2.5rem;
+                padding-bottom: 3rem;
+            }
+
+            main section {
+                padding: 1.25rem !important;
+            }
+
+            h1 {
+                font-size: 2.7rem !important;
+            }
+
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            .hero-stat {
+                min-width: 110px !important;
+                padding: 0.75rem 0.85rem !important;
+            }
+        }
+
         @media print {
 
             header,
@@ -155,12 +202,12 @@
     <header
         class="sticky top-0 z-45 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-3 min-w-0">
                 <div
-                    class="bg-academic-primary text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg shadow">
+                    class="bg-academic-primary text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg shadow shrink-0">
                     DO</div>
-                <div>
-                    <span class="block font-bold text-slate-900 dark:text-white leading-tight">Dr. Dennis Rioba Ocharo,
+                <div class="min-w-0">
+                    <span class="block font-bold text-slate-900 dark:text-white leading-tight truncate">Dr. Dennis Rioba Ocharo,
                         PhD</span>
                     <span class="text-xs text-slate-500 dark:text-slate-400">Kisii University</span>
                 </div>
@@ -194,12 +241,28 @@
                     class="hidden sm:inline-flex items-center bg-amber-500 hover:bg-amber-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition shadow-sm">
                     <i class="fa-solid fa-book-open-reader mr-2"></i> Scholar
                 </a>
+                <button id="mobileMenuButton" onclick="toggleMobileMenu()"
+                    class="lg:hidden p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+                    aria-label="Toggle mobile menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <button onclick="openContactModal()"
                     class="bg-academic-primary hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition shadow-sm">
                     <i class="fa-solid fa-envelope mr-2"></i> Contact
                 </button>
             </div>
         </div>
+
+        <nav id="mobileNav" class="mobile-nav border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 lg:hidden">
+            <div class="max-w-7xl mx-auto px-4 py-3 space-y-2 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#about" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">About</a>
+                <a href="#scholar" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Google Scholar & Research</a>
+                <a href="#supervision" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Supervision</a>
+                <a href="#experience" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Experience</a>
+                <a href="#education" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Education</a>
+                <a href="#referees" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Referees</a>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -919,6 +982,13 @@
                 themeIcon.classList.remove('fa-sun');
                 themeIcon.classList.add('fa-moon');
             }
+        }
+
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const button = document.getElementById('mobileMenuButton');
+            const isOpen = mobileNav.classList.toggle('open');
+            button.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         }
 
         function openContactModal() {
