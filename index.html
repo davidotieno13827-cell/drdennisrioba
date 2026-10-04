@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Dennis Rioba Ocharo, PhD | Academic & Research Portfolio</title>
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description"
+        content="Official Academic Portfolio of Dr. Dennis Rioba Ocharo, PhD - Expert in Project Planning, Management, Monitoring & Evaluation at Kisii University.">
+    <meta property="og:title" content="Dr. Dennis Rioba Ocharo, PhD | Academic & Research Portfolio">
+    <meta property="og:description"
+        content="Explore research publications, student supervision, academic experience, and contact details.">
+    <meta property="og:type" content="profile">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        academic: {
+                            primary: '#1e3a8a', // Deep Navy
+                            secondary: '#0f172a',
+                            accent: '#d97706', // Warm Gold
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Print-Friendly CSS Styles -->
+    <style>
+        @media print {
+
+            header,
+            footer,
+            #contactModal,
+            .no-print {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+            }
+
+            section {
+                break-inside: avoid;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 10px 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Navigation Bar -->
+    <header
+        class="sticky top-0 z-45 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div
+                    class="bg-academic-primary text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg shadow">
+                    DO</div>
+                <div>
+                    <span class="block font-bold text-slate-900 dark:text-white leading-tight">Dr. Dennis Rioba Ocharo,
+                        PhD</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">Kisii University</span>
+                </div>
+            </div>
+            <nav class="hidden lg:flex space-x-5 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-academic-primary dark:hover:text-amber-400 transition">About</a>
+                <a href="#scholar" class="hover:text-academic-primary dark:hover:text-amber-400 transition">Google
+                    Scholar & Research</a>
+                <a href="#supervision"
+                    class="hover:text-academic-primary dark:hover:text-amber-400 transition">Supervision</a>
+                <a href="#experience"
+                    class="hover:text-academic-primary dark:hover:text-amber-400 transition">Experience</a>
+                <a href="#education"
+                    class="hover:text-academic-primary dark:hover:text-amber-400 transition">Education</a>
+                <a href="#referees"
+                    class="hover:text-academic-primary dark:hover:text-amber-400 transition">Referees</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleDarkMode()"
+                    class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+                    title="Toggle Dark/Light Mode">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </button>
+                <a href="mailto:rioba1983@gmail.com?subject=CV%20Request%20for%20Dr.%20Dennis%20Rioba%20Ocharo"
+                    class="hidden sm:inline-flex items-center bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-3 py-2 rounded-lg text-sm font-medium transition border border-slate-300 dark:border-slate-700">
+                    <i class="fa-solid fa-file-arrow-down mr-2 text-academic-primary dark:text-amber-400"></i> CV
+                </a>
+                <a href="https://scholar.google.com/scholar?q=Dr.+Dennis+Rioba+Ocharo+Kisii+University" target="_blank"
+                    rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center bg-amber-500 hover:bg-amber-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition shadow-sm">
+                    <i class="fa-solid fa-book-open-reader mr-2"></i> Scholar
+                </a>
+                <button onclick="openContactModal()"
+                    class="bg-academic-primary hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition shadow-sm">
+                    <i class="fa-solid fa-envelope mr-2"></i> Contact
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="bg-gradient-to-br from-slate-900 via-academic-primary to-blue-950 text-white py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-4 flex justify-center">
+                <div class="relative">
+                    <div
+                        class="absolute -inset-1.5 bg-gradient-to-r from-amber-500 to-blue-500 rounded-2xl blur opacity-30">
+                    </div>
+                    <div
+                        class="relative w-64 h-72 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-slate-800 flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-user-tie text-7xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-8 space-y-6">
+                <div
+                    class="inline-flex items-center space-x-2 bg-blue-900/60 border border-blue-400/30 px-3 py-1 rounded-full text-xs font-semibold text-blue-200 uppercase tracking-wider">
+                    <i class="fa-solid fa-graduation-cap text-amber-400"></i>
+                    <span>Project Planning, Management & Research Expert</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                    Dr. Dennis Rioba Ocharo, <span class="text-amber-400 font-light">PhD</span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
+                    Part-Time Lecturer at Kisii University specializing in Project Planning, Management, Monitoring &
+                    Evaluation, and Strategic Public Research. Dedicated to transforming institutional policies and
+                    building sustainable academic frameworks.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2 text-sm text-slate-300">
+                    <div class="flex items-center space-x-2"><i
+                            class="fa-solid fa-location-dot text-amber-400"></i><span>Kisii University, Kenya</span>
+                    </div>
+                    <div class="flex items-center space-x-2"><i
+                            class="fa-solid fa-phone text-amber-400"></i><span>0718871635</span></div>
+                    <div class="flex items-center space-x-2"><i
+                            class="fa-solid fa-envelope text-amber-400"></i><span>rioba1983@gmail.com</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+        <!-- About & Attributes -->
+        <section id="about"
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
+                <i class="fa-solid fa-id-card text-academic-primary dark:text-amber-400 mr-3"></i> Professional Profile
+                & Attributes
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-600 dark:text-slate-300">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-100 dark:border-slate-700/50 space-y-3">
+                    <div class="text-academic-primary dark:text-amber-400 text-xl"><i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white">Core Mission</h3>
+                    <p class="text-sm leading-relaxed">Seeking to contribute towards critical thinking, monitoring,
+                        evaluation, and meeting institutional goals, mission, objectives, and values.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-100 dark:border-slate-700/50 space-y-3">
+                    <div class="text-academic-primary dark:text-amber-400 text-xl"><i
+                            class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="font-bold text-slate-900 dark:text-white">Strategic Focus</h3>
+                    <p class="text-sm leading-relaxed">Assisting institutional innovators to respond to regulatory and
+                        policy reforms including operations to achieve strategic guidelines.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-100 dark:border-slate-700/50 space-y-3">
+                    <div class="text-academic-primary dark:text-amber-400 text-xl"><i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white">Work Ethic</h3>
+                    <p class="text-sm leading-relaxed">Ambitious, self-motivated professional believing in teamwork,
+                        professionalism, integrity, and minimum supervision.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Interests -->
+        <section
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
+                <i class="fa-solid fa-magnifying-glass-chart text-academic-primary dark:text-amber-400 mr-3"></i>
+                Research Interests
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Project Monitoring & Evaluation</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Programme performance assessment,
+                        institutional accountability, and evidence-based learning in public and development projects.
+                    </p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Strategic Project Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Project planning frameworks, policy
+                        implementation, leadership alignment, and sustainable performance improvement.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Agricultural & Public Policy</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Research on governance, agricultural
+                        development, policy reform, and the operational effectiveness of public initiatives.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Scholar & Research Hub Section with Category Filters & Search -->
+        <section id="scholar"
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <div
+                class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 pb-6 border-b border-slate-100 dark:border-slate-800 gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center">
+                        <i class="fa-solid fa-graduation-cap text-academic-primary dark:text-amber-400 mr-3"></i> Google
+                        Scholar & Research Metrics
+                    </h2>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Peer-reviewed publications, academic
+                        impact, and conference papers</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <input type="text" id="pubSearch" placeholder="Search publications..."
+                        onkeyup="filterPublications()"
+                        class="px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                </div>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="flex flex-wrap gap-2 mb-6">
+                <button onclick="filterCategory('all')" id="btn-all"
+                    class="category-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-academic-primary text-white transition">All
+                    Works</button>
+                <button onclick="filterCategory('2025')" id="btn-2025"
+                    class="category-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">2025
+                    Journals</button>
+                <button onclick="filterCategory('2020')" id="btn-2020"
+                    class="category-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">2020
+                    Journals</button>
+                <button onclick="filterCategory('conference')" id="btn-conference"
+                    class="category-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">Conferences</button>
+            </div>
+
+            <!-- Scholar Metrics Overview Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl text-center border border-slate-200 dark:border-slate-700/50">
+                    <span class="block text-2xl font-bold text-academic-primary dark:text-amber-400">4+</span>
+                    <span
+                        class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Indexed
+                        Publications</span>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl text-center border border-slate-200 dark:border-slate-700/50">
+                    <span class="block text-2xl font-bold text-academic-primary dark:text-amber-400">2025</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Recent
+                        Outputs</span>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl text-center border border-slate-200 dark:border-slate-700/50">
+                    <span class="block text-2xl font-bold text-academic-primary dark:text-amber-400">3+</span>
+                    <span
+                        class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Conferences</span>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl text-center border border-slate-200 dark:border-slate-700/50">
+                    <span class="block text-2xl font-bold text-academic-primary dark:text-amber-400">Project M&E</span>
+                    <span
+                        class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Primary
+                        Field</span>
+                </div>
+            </div>
+
+            <!-- Publications List (Filterable) -->
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                <i class="fa-solid fa-book-open text-academic-accent mr-2 text-sm"></i> Featured Publications
+            </h3>
+            <div id="publicationsList" class="space-y-4 mb-8">
+                <div class="publication-item p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 hover:border-blue-300 transition"
+                    data-category="2025"
+                    data-text="influence of evaluation on performance of public agricultural projects galana kilifi county kenya ocharo strategic journal of business change management">
+                    <span
+                        class="inline-block bg-blue-100 dark:bg-blue-900/50 text-academic-primary dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-semibold mb-2">2025
+                        Journal Article</span>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Influence of Evaluation on
+                        Performance of Public Agricultural Projects in Galana Kilifi County, Kenya</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Ocharo, D. (2025). <em>The Strategic
+                            Journal of Business & Change Management</em>, 2(2).</p>
+                    <a href="https://scholar.google.com/scholar?q=Influence+of+Evaluation+on+Performance+of+Public+Agricultural+Projects+in+Galana+Kilifi+County+Kenya"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center mt-3 text-xs font-semibold text-academic-primary dark:text-amber-400 hover:underline">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> View publication
+                    </a>
+                </div>
+                <div class="publication-item p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 hover:border-blue-300 transition"
+                    data-category="2025"
+                    data-text="partnership planning for me and performance of public agricultural projects galana kilifi county kenya ocharo international journal of scientific research in science and technology">
+                    <span
+                        class="inline-block bg-blue-100 dark:bg-blue-900/50 text-academic-primary dark:text-blue-300 text-xs px-2.5 py-0.5 rounded font-semibold mb-2">2025
+                        Journal Article</span>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Partnership Planning for M&E and
+                        Performance of Public Agricultural Projects in Galana Kilifi County, Kenya</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Ocharo, D. (2025). <em>International
+                            Journal of Scientific Research in Science and Technology</em>, 12(1).</p>
+                    <a href="https://scholar.google.com/scholar?q=Partnership+Planning+for+M%26E+and+Performance+of+Public+Agricultural+Projects+in+Galana+Kilifi+County+Kenya"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center mt-3 text-xs font-semibold text-academic-primary dark:text-amber-400 hover:underline">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> View publication
+                    </a>
+                </div>
+                <div class="publication-item p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 hover:border-blue-300 transition"
+                    data-category="2020"
+                    data-text="influence of routine programme monitoring on performance of public agricultural projects in galana kilifi county kenya ocharo rambo ojwang international journal of innovative research and advanced studies">
+                    <span
+                        class="inline-block bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs px-2.5 py-0.5 rounded font-semibold mb-2">2020
+                        Journal Article</span>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Influence of Routine Programme
+                        Monitoring on Performance of Public Agricultural Projects in Galana Kilifi County, Kenya</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Ocharo, D., Rambo, C., & Ojwang, B.
+                        (2020). <em>International Journal of Innovative Research and Advanced Studies</em>, 7(2).</p>
+                    <a href="https://scholar.google.com/scholar?q=Influence+of+Routine+Programme+Monitoring+on+Performance+of+Public+Agricultural+Projects+in+Galana+Kilifi+County+Kenya"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center mt-3 text-xs font-semibold text-academic-primary dark:text-amber-400 hover:underline">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> View publication
+                    </a>
+                </div>
+                <div class="publication-item p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 hover:border-blue-300 transition"
+                    data-category="2020"
+                    data-text="influence of monitoring and evaluation frameworks on performance of public agricultural projects in galana kilifi county kenya ocharo rambo ojwang european journal of physical and agricultural sciences">
+                    <span
+                        class="inline-block bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs px-2.5 py-0.5 rounded font-semibold mb-2">2020
+                        Journal Article</span>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Influence of Monitoring and
+                        Evaluation Frameworks on Performance of Public Agricultural Projects in Galana Kilifi County,
+                        Kenya</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Ocharo, D., Rambo, C., & Ojwang, B.
+                        (2020). <em>European Journal of Physical and Agricultural Sciences</em>, 8(1).</p>
+                    <a href="https://scholar.google.com/scholar?q=Influence+of+Monitoring+and+Evaluation+Frameworks+on+Performance+of+Public+Agricultural+Projects+in+Galana+Kilifi+County+Kenya"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center mt-3 text-xs font-semibold text-academic-primary dark:text-amber-400 hover:underline">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> View publication
+                    </a>
+                </div>
+            </div>
+
+            <!-- Conferences & Workshops Attended -->
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                <i class="fa-solid fa-chalkboard-user text-academic-accent mr-2 text-sm"></i> Conferences & Workshops
+                Attended
+            </h3>
+            <div id="conferenceList" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="publication-item bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50"
+                    data-category="conference"
+                    data-text="19th 21st sept 2023 1st sobe international conference sustainability and green project management">
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">19th–21st Sept,
+                        2023</span>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-1">1st SOBE International Conference
+                    </h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Presented paper on <em>Sustainability and
+                            Green Project Management</em>.</p>
+                </div>
+                <div class="publication-item bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50"
+                    data-category="conference"
+                    data-text="10th 12th sept 2024 2nd international multi disciplinary conference strengthening african economies through innovations for sustainable development">
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">10th–12th Sept,
+                        2024</span>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-1">2nd International
+                        Multi-Disciplinary Conference</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Presented paper on <em>Strengthening
+                            African Economies Through Innovations for Sustainable Development</em>.</p>
+                </div>
+                <div class="publication-item bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50"
+                    data-category="conference"
+                    data-text="5th march 2025 pedagogy workshop retooling trainers for effective learning">
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">5th March, 2025</span>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-1">Pedagogy Workshop</h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Retooling Trainers for Effective
+                        Learning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching & Courses -->
+        <section
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
+                <i class="fa-solid fa-chalkboard text-academic-primary dark:text-amber-400 mr-3"></i> Teaching & Courses
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <span
+                        class="text-xs font-bold uppercase tracking-wider text-academic-primary dark:text-amber-400">Core
+                        courses</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white mt-2">Monitoring & Evaluation</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Designing and assessing programme
+                        outcomes, indicators, results frameworks, and public sector performance systems.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <span
+                        class="text-xs font-bold uppercase tracking-wider text-academic-primary dark:text-amber-400">Project
+                        practice</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white mt-2">Project Total Quality Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Ensuring quality planning,
+                        implementation, and continuous improvement across project lifecycles.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <span
+                        class="text-xs font-bold uppercase tracking-wider text-academic-primary dark:text-amber-400">Management</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white mt-2">Public Financial Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Budgeting, accountability, resource
+                        allocation and financial governance for public institutions.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <span
+                        class="text-xs font-bold uppercase tracking-wider text-academic-primary dark:text-amber-400">Strategy</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white mt-2">Project Scope Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Defining deliverables, managing change,
+                        and aligning project goals with institutional strategy.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <span
+                        class="text-xs font-bold uppercase tracking-wider text-academic-primary dark:text-amber-400">Sustainability</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white mt-2">Environmental Impact Assessment</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Understanding social and environmental
+                        risk, sustainability planning, and policy compliance.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    <span
+                        class="text-xs font-bold uppercase tracking-wider text-academic-primary dark:text-amber-400">Leadership</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white mt-2">Entrepreneurship & Small Business
+                        Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Developing entrepreneurial thinking,
+                        venture fundamentals, and practical management competencies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Graduate & Undergraduate Supervision -->
+        <section id="supervision"
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
+                <i class="fa-solid fa-users-rectangle text-academic-primary dark:text-amber-400 mr-3"></i> Student
+                Supervision
+            </h2>
+
+            <div class="mb-8">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Graduate Research Supervision
+                    (2024/2025 Academic Year)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr
+                                class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700">
+                                <th class="p-3 font-semibold">#</th>
+                                <th class="p-3 font-semibold">Candidate Name</th>
+                                <th class="p-3 font-semibold">Degree Program</th>
+                                <th class="p-3 font-semibold">Thesis Title</th>
+                            </tr>
+                        </thead>
+                        <tbody
+                            class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                            <tr>
+                                <td class="p-3 font-medium">1</td>
+                                <td class="p-3 font-semibold text-slate-900 dark:text-white">Zipporah Onkoba</td>
+                                <td class="p-3">PhD (Strategic Management Option)</td>
+                                <td class="p-3">Organization Agility Practices, Transformational Leadership and
+                                    Performance of State Corporations: A Case of Postal Corporation of Kenya</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium">2</td>
+                                <td class="p-3 font-semibold text-slate-900 dark:text-white">Victor Aduwo Odhiambo</td>
+                                <td class="p-3">MSc (Project Management, M&E)</td>
+                                <td class="p-3">Influence of Monitoring and Evaluation System on Performance of Public
+                                    Junior Secondary Schools in Migori County, Kenya</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium">3</td>
+                                <td class="p-3 font-semibold text-slate-900 dark:text-white">Boniface Musundi Oganyo
+                                </td>
+                                <td class="p-3">MSc (Project Management, M&E)</td>
+                                <td class="p-3">Influence of Project Management Process on Performance of Public Health
+                                    Immunization Programmes in Homa-Bay County, Kenya</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium">4</td>
+                                <td class="p-3 font-semibold text-slate-900 dark:text-white">Deborah Kemunto Omboga</td>
+                                <td class="p-3">MSc (Project Management, M&E)</td>
+                                <td class="p-3">Influence of Project Management Strategies on Performance of Projects
+                                    Implemented by NGOs in the Health Sector: A Case of Cancer Projects in Nairobi
+                                    County, Kenya</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Undergraduate Supervision (2023/2024
+                    Academic Year)</h3>
+                <p
+                    class="text-sm text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50">
+                    Supervised Eight (8) students; Four (4) students per group across Two (2) groups in Management
+                    Research Papers to fulfill requirements for the Degree of Bachelor of Science in Project Planning
+                    and Management.
+                </p>
+            </div>
+        </section>
+
+        <!-- Academic Experience -->
+        <section id="experience"
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
+                <i class="fa-solid fa-briefcase text-academic-primary dark:text-amber-400 mr-3"></i> Work Experience &
+                Lecturing History
+            </h2>
+            <div class="space-y-6 border-l-2 border-blue-100 dark:border-slate-800 pl-4 md:pl-6 ml-2">
+                <div class="relative">
+                    <div
+                        class="absolute -left-[23px] top-1.5 w-3 h-3 bg-academic-primary dark:bg-amber-400 rounded-full ring-4 ring-white dark:ring-slate-900">
+                    </div>
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">January 2015 –
+                        Present</span>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Part-Time Lecturer, Kisii University
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">School of Business & Economics (Dept. of
+                        Management Science), School of Arts & Social Sciences (Political Science & Sociology), and
+                        School of Tourism & Hospitality. Teaching courses including Monitoring & Evaluation, Project
+                        Total Quality Management, International Project Management, Project Scope Management, Public
+                        Financial Management, and Environmental Impact Assessment.</p>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute -left-[23px] top-1.5 w-3 h-3 bg-slate-400 rounded-full ring-4 ring-white dark:ring-slate-900">
+                    </div>
+                    <span class="text-xs font-bold text-slate-500">January 2015 – August 2017</span>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Part-Time Lecturer, Jomo Kenyatta
+                        University of Agriculture and Technology (JKUAT)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Department of Social Sciences. Taught
+                        Public Policy, Organizational Development, Project Appraisals, Human Resource Insurance & Risk
+                        Management, and Legal Aspects.</p>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute -left-[23px] top-1.5 w-3 h-3 bg-slate-400 rounded-full ring-4 ring-white dark:ring-slate-900">
+                    </div>
+                    <span class="text-xs font-bold text-slate-500">January 2015 – August 2016</span>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Part-Time Lecturer, University of
+                        Nairobi</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">School of Continuing & Distance
+                        Education. Taught Masters in Project Planning & Management courses including Entrepreneurship
+                        and Small Business Management.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education"
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
+                <i class="fa-solid fa-graduation-cap text-academic-primary dark:text-amber-400 mr-3"></i> Educational
+                Background
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 space-y-2">
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">2015 – 2021</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-lg">Doctor of Philosophy in Project
+                        Planning and Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">University of Nairobi</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 italic pt-2">Thesis: Monitoring and Evaluation
+                        System, Project Management Process and Performance of Public Agricultural Projects in Galana
+                        Kilifi County, Kenya.</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 space-y-2">
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">2012 – 2014</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-lg">Master of Arts in Project Planning and
+                        Management</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">University of Nairobi</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 space-y-2">
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">2009 – 2012</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-lg">Bachelor of Business and Management
+                        (Human Resource Management)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Egerton University — Second Class Honors
+                        (Upper Division)</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 space-y-2">
+                    <span class="text-xs font-bold text-academic-primary dark:text-amber-400">2016 (3 Weeks)</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-lg">Certificate in Environmental Impact
+                        Assessment</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Jomo Kenyatta University of Science and
+                        Technology</p>
+                </div>
+            </div>
+            <div
+                class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex flex-wrap gap-6">
+                <span><strong>Secondary School:</strong> St. Joseph's Secondary School, Rapogi (1999–2002) — Grade B-
+                    (Minus)</span>
+                <span><strong>Primary School:</strong> St. Mary's Primary School, Mosocho (1990–1998) — 548/700
+                    Marks</span>
+            </div>
+        </section>
+
+        <!-- Affiliations, Hobbies & Languages -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-3 transition-colors">
+                <h3 class="font-bold text-slate-900 dark:text-white flex items-center"><i
+                        class="fa-solid fa-award text-academic-primary dark:text-amber-400 mr-2"></i> Affiliation</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300"><strong>Kenya Association of Project
+                        Managers</strong><br>Membership Number: 459</p>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-3 transition-colors">
+                <h3 class="font-bold text-slate-900 dark:text-white flex items-center"><i
+                        class="fa-solid fa-heart text-academic-primary dark:text-amber-400 mr-2"></i> Hobbies &
+                    Interests</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Reading and Analyzing Financial Investment Tools,
+                    Conducting Research, and Teaching.</p>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-3 transition-colors">
+                <h3 class="font-bold text-slate-900 dark:text-white flex items-center"><i
+                        class="fa-solid fa-language text-academic-primary dark:text-amber-400 mr-2"></i> Languages</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Proficient/Fluent in English, Swahili, Luo, and
+                    Kisii (spoken and written).</p>
+            </div>
+        </section>
+
+        <!-- Referees Section -->
+        <section id="referees"
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
+                <i class="fa-solid fa-address-book text-academic-primary dark:text-amber-400 mr-3"></i> Referees
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 space-y-2">
+                    <h3 class="font-bold text-slate-900 dark:text-white">Dr. Caleb Akuku Nyagar, PhD</h3>
+                    <p class="text-xs font-semibold text-academic-primary dark:text-amber-400">Dean, School of Business
+                        and Economics</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">Kisii University, P.O Box 408-40200, Kisii</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300"><i
+                            class="fa-solid fa-phone mr-1 text-slate-400"></i> 0721299487</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300"><i
+                            class="fa-solid fa-envelope mr-1 text-slate-400"></i> calebakuku@kisiiuniversity.ac.ke</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 space-y-2">
+                    <h3 class="font-bold text-slate-900 dark:text-white">Dr. Yobes Benjamin Nyaboga, PhD</h3>
+                    <p class="text-xs font-semibold text-academic-primary dark:text-amber-400">Coordinator Postgraduate
+                        Programmes</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">School of Business & Economics, Kisii
+                        University</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300"><i
+                            class="fa-solid fa-phone mr-1 text-slate-400"></i> 0734654057</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300"><i
+                            class="fa-solid fa-envelope mr-1 text-slate-400"></i> yobesbenjamin@gmail.com</p>
+                </div>
+                <div
+                    class="bg-slate-50 dark:bg-slate-800/60 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 space-y-2">
+                    <h3 class="font-bold text-slate-900 dark:text-white">Dr. Fridah Chepleting, PhD</h3>
+                    <p class="text-xs font-semibold text-academic-primary dark:text-amber-400">Chair of Department,
+                        Management Science</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">School of Business & Economics, Kisii
+                        University</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300"><i
+                            class="fa-solid fa-phone mr-1 text-slate-400"></i> 0726963171</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-300"><i
+                            class="fa-solid fa-envelope mr-1 text-slate-400"></i> ksumgtsci.dept@kisiiuniversity.ac.ke
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Contact Modal -->
+    <div id="contactModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden">
+        <div
+            class="bg-white dark:bg-slate-900 w-full max-w-lg rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 relative mx-4">
+            <button onclick="closeContactModal()"
+                class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2"><i
+                    class="fa-solid fa-envelope text-academic-primary dark:text-amber-400 mr-2"></i> Contact Dr. Dennis
+                Rioba</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Send an academic inquiry or research
+                collaboration request.</p>
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
+                        Name</label>
+                    <input type="text" required
+                        class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
+                        Email</label>
+                    <input type="email" required
+                        class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                </div>
+                <div>
+                    <label
+                        class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Message</label>
+                    <textarea rows="4" required
+                        class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-academic-primary hover:bg-blue-900 text-white font-medium py-2.5 rounded-lg transition shadow-sm">Send
+                    Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 mt-20 border-t border-slate-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="font-bold text-lg">Dr. Dennis Rioba Ocharo, PhD</span>
+                <p class="text-xs text-slate-400 mt-1">Kisii University — Department of Management Science</p>
+            </div>
+            <div class="text-xs text-slate-400 text-center md:text-right">
+                <p>&copy; 2026 Dr. Dennis Rioba Ocharo. All rights reserved.</p>
+                <p class="mt-1">Professional Academic Portfolio</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts (Search, Filters, Dark Mode & Modal) -->
+    <script>
+        let currentCategory = 'all';
+
+        function filterCategory(category) {
+            currentCategory = category;
+
+            // Update button styles
+            const buttons = document.getElementsByClassName('category-btn');
+            for (let btn of buttons) {
+                btn.classList.remove('bg-academic-primary', 'text-white');
+                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+            }
+            const activeBtn = document.getElementById('btn-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+                activeBtn.classList.add('bg-academic-primary', 'text-white');
+            }
+
+            applyFilters();
+        }
+
+        function filterPublications() {
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchInput = document.getElementById('pubSearch').value.toLowerCase();
+            const items = document.getElementsByClassName('publication-item');
+
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i];
+                const cat = item.getAttribute('data-category');
+                const text = item.getAttribute('data-text');
+
+                const matchesCategory = (currentCategory === 'all' || cat === currentCategory);
+                const matchesSearch = text.includes(searchInput);
+
+                if (matchesCategory && matchesSearch) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            }
+        }
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            html.classList.toggle('dark');
+
+            if (html.classList.contains('dark')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message. Your inquiry has been sent to Dr. Ocharo.');
+            closeContactModal();
+            event.target.reset();
+        }
+    </script>
+</body>
+
+</html>
