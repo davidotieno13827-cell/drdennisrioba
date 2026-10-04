@@ -130,10 +130,33 @@
             border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
+        @media (max-width: 1023px) {
+            header .max-w-7xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .hero-section {
+                padding-top: 4.5rem;
+                padding-bottom: 4rem;
+            }
+
+            .hero-section .md\:col-span-8,
+            .hero-section .md\:col-span-4 {
+                grid-column: span 12 / span 12;
+            }
+        }
+
         @media (max-width: 767px) {
             header .max-w-7xl {
                 padding-left: 0.75rem;
                 padding-right: 0.75rem;
+            }
+
+            .header-actions {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                justify-content: flex-end;
             }
 
             header {
@@ -157,6 +180,11 @@
                 padding: 1.25rem !important;
             }
 
+            .hero-section {
+                padding-top: 3.5rem;
+                padding-bottom: 3rem;
+            }
+
             h1 {
                 font-size: 2.7rem !important;
             }
@@ -168,6 +196,18 @@
             .hero-stat {
                 min-width: 110px !important;
                 padding: 0.75rem 0.85rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-actions a,
+            .header-actions button {
+                flex: 1 1 auto;
+            }
+
+            .brand-block {
+                min-width: 0;
+                max-width: calc(100% - 3.5rem);
             }
         }
 
@@ -201,13 +241,14 @@
     <!-- Navigation Bar -->
     <header
         class="sticky top-0 z-45 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3 min-w-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+            <div class="brand-block flex items-center space-x-3 min-w-0">
                 <div
                     class="bg-academic-primary text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg shadow shrink-0">
                     DO</div>
                 <div class="min-w-0">
-                    <span class="block font-bold text-slate-900 dark:text-white leading-tight truncate">Dr. Dennis Rioba Ocharo,
+                    <span class="block font-bold text-slate-900 dark:text-white leading-tight truncate text-sm sm:text-base">Dr. Dennis Rioba
+                        Ocharo,
                         PhD</span>
                     <span class="text-xs text-slate-500 dark:text-slate-400">Kisii University</span>
                 </div>
@@ -225,7 +266,7 @@
                 <a href="#referees"
                     class="hover:text-academic-primary dark:hover:text-amber-400 transition">Referees</a>
             </nav>
-            <div class="flex items-center space-x-3">
+            <div class="header-actions flex items-center space-x-3">
                 <!-- Theme Toggle Button -->
                 <button onclick="toggleDarkMode()"
                     class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
@@ -253,21 +294,29 @@
             </div>
         </div>
 
-        <nav id="mobileNav" class="mobile-nav border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 lg:hidden">
+        <nav id="mobileNav"
+            class="mobile-nav border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 lg:hidden">
             <div class="max-w-7xl mx-auto px-4 py-3 space-y-2 text-sm font-medium text-slate-600 dark:text-slate-300">
-                <a href="#about" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">About</a>
-                <a href="#scholar" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Google Scholar & Research</a>
-                <a href="#supervision" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Supervision</a>
-                <a href="#experience" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Experience</a>
-                <a href="#education" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Education</a>
-                <a href="#referees" class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Referees</a>
+                <a href="#about"
+                    class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">About</a>
+                <a href="#scholar"
+                    class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Google Scholar &
+                    Research</a>
+                <a href="#supervision"
+                    class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Supervision</a>
+                <a href="#experience"
+                    class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Experience</a>
+                <a href="#education"
+                    class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Education</a>
+                <a href="#referees"
+                    class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Referees</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section
-        class="bg-gradient-to-br from-slate-900 via-academic-primary to-blue-950 text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        class="hero-section bg-gradient-to-br from-slate-900 via-academic-primary to-blue-950 text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,191,36,0.22),transparent_35%)]">
         </div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
