@@ -310,6 +310,8 @@
                 <a href="#about" class="hover:text-academic-primary dark:hover:text-amber-400 transition">About</a>
                 <a href="#scholar" class="hover:text-academic-primary dark:hover:text-amber-400 transition">Google
                     Scholar & Research</a>
+                <a href="#toolkit" class="hover:text-academic-primary dark:hover:text-amber-400 transition">Student
+                    Toolkit</a>
                 <a href="#supervision"
                     class="hover:text-academic-primary dark:hover:text-amber-400 transition">Supervision</a>
                 <a href="#experience"
@@ -355,6 +357,9 @@
                 <a href="#scholar"
                     class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Google Scholar &
                     Research</a>
+                <a href="#toolkit"
+                    class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Student
+                    Toolkit</a>
                 <a href="#supervision"
                     class="block py-2 hover:text-academic-primary dark:hover:text-amber-400 transition">Supervision</a>
                 <a href="#experience"
@@ -728,6 +733,143 @@
             </div>
         </section>
 
+        <!-- Student Resources, Consultation Requests & Proposal Checklist -->
+        <section id="toolkit"
+            class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
+            <div class="mb-8 pb-6 border-b border-slate-100 dark:border-slate-800">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center">
+                    <i class="fa-solid fa-toolbox text-academic-primary dark:text-amber-400 mr-3"></i> Student &
+                    Research Workbench
+                </h2>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Course resources, proposal preparation, and
+                    structured academic requests in one place.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-5">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Student Resources</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Approved course materials will be
+                        organized by unit here.</p>
+                    <div class="space-y-3">
+                        <div
+                            class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50">
+                            <h4 class="font-semibold text-slate-900 dark:text-white">Monitoring & Evaluation</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">No course files have been
+                                published yet.</p>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50">
+                            <h4 class="font-semibold text-slate-900 dark:text-white">Public Financial Management</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">No course files have been
+                                published yet.</p>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50">
+                            <h4 class="font-semibold text-slate-900 dark:text-white">Project Planning & Management</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">No course files have been
+                                published yet.</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/30 p-3 rounded-lg mt-4">
+                        Resources added to this static website are public. Do not upload student records, restricted
+                        papers, or materials that require a class password.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Consultation & Professional
+                        Inquiries</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Choose an inquiry type and provide
+                        details. Submitting opens an email draft for you to review and send.</p>
+                    <form id="workbenchForm" onsubmit="handleWorkbenchSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="requestName"
+                                    class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
+                                    Name</label>
+                                <input id="requestName" name="name" type="text" autocomplete="name" required
+                                    maxlength="100"
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                            </div>
+                            <div>
+                                <label for="requestEmail"
+                                    class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
+                                    Email</label>
+                                <input id="requestEmail" name="email" type="email" autocomplete="email" required
+                                    maxlength="150"
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="requestType"
+                                class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Inquiry
+                                Type</label>
+                            <select id="requestType" name="type" required
+                                class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                                <option value="">Select an inquiry type</option>
+                                <option>Student consultation</option>
+                                <option>Thesis supervision meeting</option>
+                                <option>Research collaboration</option>
+                                <option>M&amp;E consultancy</option>
+                                <option>Guest speaker</option>
+                                <option>Thesis defense</option>
+                                <option>Other academic inquiry</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="requestSubject"
+                                    class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Unit,
+                                    Project, or Organization</label>
+                                <input id="requestSubject" name="subject" type="text" maxlength="150"
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                            </div>
+                            <div>
+                                <label for="requestDate"
+                                    class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Preferred
+                                    Date &amp; Time (optional)</label>
+                                <input id="requestDate" name="date" type="datetime-local"
+                                    class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
+                            </div>
+                        </div>
+                        <div id="proposalChecklist" class="hidden rounded-xl bg-slate-50 dark:bg-slate-800/60 p-4 border border-slate-200 dark:border-slate-700/50">
+                            <fieldset>
+                                <legend class="text-sm font-bold text-slate-900 dark:text-white">Pre-meeting proposal checklist</legend>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 mb-3">For supervision meetings, confirm each item. Follow your department's official template and requirements.</p>
+                                <div class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                    <label class="flex items-start gap-2"><input class="proposal-check mt-1" type="checkbox">
+                                        <span>My research problem, objectives, and questions are clearly stated and aligned.</span></label>
+                                    <label class="flex items-start gap-2"><input class="proposal-check mt-1" type="checkbox">
+                                        <span>I used the current department-approved proposal structure and template.</span></label>
+                                    <label class="flex items-start gap-2"><input class="proposal-check mt-1" type="checkbox">
+                                        <span>My literature review cites its sources using the style required by my department.</span></label>
+                                    <label class="flex items-start gap-2"><input class="proposal-check mt-1" type="checkbox">
+                                        <span>My proposed methods address the research objectives, and ethical approvals are considered.</span></label>
+                                    <label class="flex items-start gap-2"><input class="proposal-check mt-1" type="checkbox">
+                                        <span>I proofread the draft and included my specific questions for the meeting.</span></label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div>
+                            <label for="requestMessage"
+                                class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Request
+                                Details</label>
+                            <textarea id="requestMessage" name="message" rows="4" required maxlength="1500"
+                                class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary"></textarea>
+                        </div>
+                        <p id="workbenchStatus" class="text-sm text-slate-600 dark:text-slate-300" role="status"
+                            aria-live="polite"></p>
+                        <button type="submit"
+                            class="w-full bg-academic-primary hover:bg-blue-900 text-white font-medium py-2.5 rounded-lg transition shadow-sm">
+                            <i class="fa-solid fa-envelope mr-2"></i>Prepare Email Request
+                        </button>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">This is an email request, not a confirmed
+                            booking. No appointment is reserved until it is confirmed by email.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Graduate & Undergraduate Supervision -->
         <section id="supervision"
             class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 transition-colors">
@@ -985,28 +1127,30 @@
                 Rioba</h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Send an academic inquiry or research
                 collaboration request.</p>
-            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+            <form id="contactRequestForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
+                    <label for="contactName" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
                         Name</label>
-                    <input type="text" required
+                    <input id="contactName" name="name" type="text" autocomplete="name" maxlength="100" required
                         class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
+                    <label for="contactEmail" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your
                         Email</label>
-                    <input type="email" required
+                    <input id="contactEmail" name="email" type="email" autocomplete="email" maxlength="150" required
                         class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary">
                 </div>
                 <div>
-                    <label
+                    <label for="contactMessage"
                         class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Message</label>
-                    <textarea rows="4" required
+                    <textarea id="contactMessage" name="message" rows="4" maxlength="1500" required
                         class="w-full px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-academic-primary"></textarea>
                 </div>
+                <p id="contactStatus" class="text-sm text-slate-600 dark:text-slate-300" role="status"
+                    aria-live="polite"></p>
                 <button type="submit"
-                    class="w-full bg-academic-primary hover:bg-blue-900 text-white font-medium py-2.5 rounded-lg transition shadow-sm">Send
-                    Message</button>
+                    class="w-full bg-academic-primary hover:bg-blue-900 text-white font-medium py-2.5 rounded-lg transition shadow-sm">Prepare
+                    Email</button>
             </form>
         </div>
     </div>
@@ -1019,6 +1163,12 @@
                 <span class="font-bold text-lg">Dr. Dennis Rioba Ocharo, PhD</span>
                 <p class="text-xs text-slate-400 mt-1">Kisii University — Department of Management Science</p>
             </div>
+            <div class="text-xs text-slate-400 text-center">
+                <p class="font-semibold text-slate-200">Website by DO Systems</p>
+                <p class="mt-1"><a href="mailto:DOsystems13827@gmail.com"
+                        class="hover:text-amber-400 transition">DOsystems13827@gmail.com</a></p>
+                <p class="mt-1"><a href="tel:+254746432933" class="hover:text-amber-400 transition">0746432933</a></p>
+            </div>
             <div class="text-xs text-slate-400 text-center md:text-right">
                 <p>&copy; 2026 Dr. Dennis Rioba Ocharo. All rights reserved.</p>
                 <p class="mt-1">Professional Academic Portfolio</p>
@@ -1029,6 +1179,50 @@
     <!-- Interactive Scripts (Search, Filters, Dark Mode & Modal) -->
     <script>
         let currentCategory = 'all';
+        const inquiryEmail = 'rioba1983@gmail.com';
+
+        function prepareEmail(subject, body, statusElement) {
+            const mailto = `mailto:${inquiryEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            statusElement.textContent = 'Your email app should open with this request. Review it and press Send to deliver it.';
+            window.location.href = mailto;
+        }
+
+        function updateProposalChecklist() {
+            const requestType = document.getElementById('requestType').value;
+            const checklist = document.getElementById('proposalChecklist');
+            const checks = checklist.querySelectorAll('.proposal-check');
+            const isSupervisionMeeting = requestType === 'Student consultation' ||
+                requestType === 'Thesis supervision meeting' || requestType === 'Thesis defense';
+
+            checklist.classList.toggle('hidden', !isSupervisionMeeting);
+            checks.forEach((check) => {
+                check.required = isSupervisionMeeting;
+            });
+        }
+
+        function handleWorkbenchSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const requestType = formData.get('type');
+            const preferredDate = formData.get('date');
+            const details = [
+                `Name: ${formData.get('name')}`,
+                `Email: ${formData.get('email')}`,
+                `Inquiry type: ${requestType}`,
+                `Unit, project, or organization: ${formData.get('subject') || 'Not provided'}`,
+                `Preferred date and time: ${preferredDate || 'Not provided'}`,
+                ...(document.querySelectorAll('#proposalChecklist .proposal-check[required]').length > 0
+                    ? ['Pre-meeting checklist: all items confirmed']
+                    : []),
+                '',
+                'Request details:',
+                formData.get('message')
+            ].join('\n');
+
+            prepareEmail(`${requestType} - ${formData.get('name')}`, details,
+                document.getElementById('workbenchStatus'));
+        }
 
         function filterCategory(category) {
             currentCategory = category;
@@ -1112,6 +1306,7 @@
 
         function openContactModal() {
             document.getElementById('contactModal').classList.remove('hidden');
+            document.getElementById('contactName').focus();
         }
 
         function closeContactModal() {
@@ -1120,10 +1315,19 @@
 
         function handleContactSubmit(event) {
             event.preventDefault();
-            alert('Thank you for your message. Your inquiry has been sent to Dr. Ocharo.');
-            closeContactModal();
-            event.target.reset();
+            const formData = new FormData(event.target);
+            const details = [
+                `Name: ${formData.get('name')}`,
+                `Email: ${formData.get('email')}`,
+                '',
+                formData.get('message')
+            ].join('\n');
+
+            prepareEmail(`Academic inquiry from ${formData.get('name')}`, details,
+                document.getElementById('contactStatus'));
         }
+
+        document.getElementById('requestType').addEventListener('change', updateProposalChecklist);
     </script>
 </body>
 
